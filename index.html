@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Bubble Wrap</title>
+    <link rel="icon" href="images/m_icon.png">
+
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-	<h2>Bop n' Pop</h2>
+    <h2>Bop n' Pop</h2>
+    <i class="fas fa-paint-roller" onclick="bgChange()"></i>
 </header>
 
-<div class="container">
-    <i><img id="bubOne" src="./images/bubble.png" onclick="myFunction(1)"/></i>
-    <i><img id="bubTwo" src="./images/bubble.png" onclick="myFunction(2)"/></i>
-    <i><img id="bubThree" src="./images/bubble.png" onclick="myFunction(3)"/></i>
-    <i><img id="bubFour" src="./images/bubble.png" onclick="myFunction(4)"/></i>
-    <i><img id="bubFive" src="./images/bubble.png" onclick="myFunction(5)"/></i>
-    <i><img id="bubSix" src="./images/bubble.png" onclick="myFunction(6)"/></i>
-    <i><img id="bubSeven" src="./images/bubble.png" onclick="myFunction(7)"/></i>
-    <i><img id="bubEight" src="./images/bubble.png" onclick="myFunction(8)"/></i>
-    <i><img id="bubNine" src="./images/bubble.png" onclick="myFunction(9)"/></i>
-    <i><img id="bub10" src="./images/bubble.png" onclick="myFunction(10)"/></i>
-    <i><img id="bub11" src="./images/bubble.png" onclick="myFunction(11)"/></i>
-    <i><img id="bub12" src="./images/bubble.png" onclick="myFunction(12)"/></i>
+<div id="sheet">
+</div>
+
+<div id="gameSettings"><!--
+    <i class="fas fa-clock"></i>
+    <select id="timeAmount">
+        <option value="s30" selected>30s</option>
+        <option value="s45">45s</option>
+        <option value="s60">60s</option>
+    </select>-->
+    
 </div>
 
 <div class="counters">
     <h1><span id="time">0:30</span></h1>
     <h4><a id="clicks">0</a> popped</h4>
 </div>
-
-<audio id="audio" src="audio/pop.mp3"></audio>
-<audio id="audio" src="audio/paint.mp3"></audio>
-<audio id="jingle" src="audio/jingle1.wav"></audio>
+<audio id="pop" src="audio/pop.mp3"></audio>
+<audio id="paint" src="audio/paint.mp3"></audio>
+<audio id="jingle" src="audio/jingle.mp3" onended="resetBub()"></audio>
 </body>
 <script src="./js/main.js"></script>
 </html>
